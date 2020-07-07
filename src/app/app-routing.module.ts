@@ -4,7 +4,6 @@ import {HomeComponent} from './home/home.component';
 import {SamplePageOneComponent} from './sample-page-one/sample-page-one.component';
 import {SamplePageTwoComponent} from './sample-page-two/sample-page-two.component';
 
-
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'sample-page-1', component: SamplePageOneComponent },
