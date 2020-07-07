@@ -3,7 +3,7 @@ const path = require('path');
 const app = express();
 const port = process.env.PORT || 8080;
 
-app.use(express.static(path.join(__dirname, '/src')));
+app.use(express.static(path.join(__dirname, '/dist/NodeJS-Angular-ExpressJS-Heroku-ExampleApp')));
 
 app.set('port', port);
 
