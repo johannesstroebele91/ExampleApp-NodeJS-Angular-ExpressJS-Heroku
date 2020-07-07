@@ -1,17 +1,14 @@
 const express = require('express');
-const http = require('http');
 const path = require('path');
 const app = express();
 const port = process.env.PORT || 8080;
-const server = http.createServer(app);
 
-app.use(express.static(path.join(__dirname + 'dist')));
-
-app.get('*', (req,res) => {
-  res.sendFile(path.join(__dirname, 'dist/index.html'))
-});
+app.use(express.static(path.join(__dirname, '/src')));
 
 app.set('port', port);
 
+app.listen(port, function() {
+  console.log("running");
+});
 
-server.listen(port,() => console.log('Running...'));
+module.exports = app;
