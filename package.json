@@ -1,6 +1,7 @@
 {
   "name": "node-js-angular-express-js-heroku-example-app",
   "version": "0.0.0",
+  "main": "server.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
