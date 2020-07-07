@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { HomeComponent } from './home/home.component';
 import { NavComponent } from './nav/nav.component';
+import { SamplePageOneComponent } from './sample-page-one/sample-page-one.component';
+import { SamplePageTwoComponent } from './sample-page-two/sample-page-two.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NavComponent
+    NavComponent,
+    SamplePageOneComponent,
+    SamplePageTwoComponent
   ],
   imports: [
     BrowserModule,
