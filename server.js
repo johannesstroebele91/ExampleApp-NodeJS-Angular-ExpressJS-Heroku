@@ -1,14 +1,8 @@
 const express = require('express');
-const path = require('path');
 const app = express();
-const port = process.env.PORT || 8080;
-
-app.use(express.static(path.join(__dirname, '/dist/NodeJS-Angular-ExpressJS-Heroku-ExampleApp')));
-
-app.set('port', port);
-
-app.listen(port, function() {
-  console.log("running");
+const path = require('path');
+app.use(express.static(__dirname + '/dist'));
+app.listen(process.env.PORT || 8080,() => console.log('Running...'));
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname + '/dist/index.html'));
 });
-
-module.exports = app;
