@@ -1,19 +1,23 @@
-<!--Navbar-->
-<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo">
+<mat-toolbar color="primary" class="nav-bg" style="z-index: -1;"></mat-toolbar>
+<mat-toolbar color="primary" class="container" style="margin: 0 auto;">
+  <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center">
 
-  <!-- Navbar brand -->
-  <mdb-navbar-brand><a class="navbar-brand" routerLink="/home">Example App</a></mdb-navbar-brand>
+    <span routerLink="/home">Sample App</span>
 
-  <!-- Collapsible content -->
-  <links>
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="view-desktop">
+      <span routerLink="/sample-page-1" routerLinkActive="active">Sample Page 1</span>
+      <span routerLink="/sample-page-2">Sample Page 2</span>
+    </div>
 
-    <!-- Links -->
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item" routerLink="/sample-page-1" routerLinkActive="active"><a class="nav-link waves-light" mdbWavesEffect>Sample Page 1</a></li>
-      <li class="nav-item" routerLink="/sample-page-2" ><a class="nav-link waves-light" mdbWavesEffect>Sample Page 2</a></li>
-    </ul>
-  </links>
-  <!-- Collapsible content -->
-
-</mdb-navbar>
-<!--/.Navbar-->
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="view-mobile">
+      <button (click)="showMenuMobile()" mat-icon-button aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-toolbar color="primary" *ngIf="showMobileMenu" class="view-mobile">
+  <mat-toolbar-row routerLink="/sample-page-1">Sample Page 1</mat-toolbar-row>
+  <mat-toolbar-row routerLink="/sample-page-2">Sample Page 2</mat-toolbar-row>
+  <mat-toolbar-row>Sample Page 3</mat-toolbar-row>
+</mat-toolbar>

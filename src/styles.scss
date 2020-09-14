@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/purple-green.css';
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.router-container {
+  padding: 18px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 768px;
+}
+
+@media (max-width: 767.98px) {
+  .router-container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 768px) {
+  .router-container {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+}
